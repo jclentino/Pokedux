@@ -5,3 +5,10 @@ export const getPokemon = ()=> {
         .then(res => res.data.results)
         .catch(err => console.error(err))
 }
+
+export const getPokemonDetail = (pokemon) => {
+    return axios.get(pokemon.url)
+        .then(res => res.data)
+        .catch(err => console.error(`error: ${err}`))
+}
+
