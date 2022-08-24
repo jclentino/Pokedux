@@ -11,7 +11,10 @@ const PokemonCard = ({ name, image, abilities })=> {
             cover={<img src={image} alt={name} />} 
             extra={<StarOutlined />}
         >
-            <Meta description={abilities.map(ability => ability.ability.name).join(' - ')} />
+            <Meta description={<ul>
+                {abilities.map(ability => <li key={ability.ability.name} >{ability.ability.name}</li>)}
+            </ul>} 
+            />
         </Card>
     )
 }
