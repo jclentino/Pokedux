@@ -12,3 +12,4 @@ export const getPokemonDetail = (pokemon) => {
         .catch(err => console.error(`error: ${err}`))
 }
 
+
