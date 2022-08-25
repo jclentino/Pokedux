@@ -2,7 +2,7 @@ import { StarOutlined } from "@ant-design/icons";
 import { Card } from "antd";
 import Meta from "antd/lib/card/Meta";
 
-const PokemonCard = ({ name, image, abilities })=> {
+const PokemonCard = ({ name, image, types })=> {
 
     return (
         <Card 
@@ -12,7 +12,7 @@ const PokemonCard = ({ name, image, abilities })=> {
             extra={<StarOutlined />}
         >
             <Meta description={<ul>
-                {abilities.map(ability => <li key={ability.ability.name} >{ability.ability.name}</li>)}
+                {types.map(type => <li key={type.type.name} >{type.type.name}</li>)}
             </ul>} 
             />
         </Card>

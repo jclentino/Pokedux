@@ -8,7 +8,12 @@ const PokemonList = ({ pokemons })=> {
         <div className="PokemonList">
             {
                 pokemons.map(pokemon => (
-                    <PokemonCard name={pokemon.name} key={pokemon.name} image={pokemon.sprites.front_default} abilities={pokemon.abilities} />
+                    <PokemonCard 
+                        name={pokemon.name} 
+                        key={pokemon.name} 
+                        image={pokemon.sprites.front_default} 
+                        types={pokemon.types} 
+                    />
                 ))
             }
         </div>
