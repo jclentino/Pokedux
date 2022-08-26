@@ -1,5 +1,5 @@
 import React from 'react';
-import { pokemonsReducer } from './reducers/pokemons';
+import rootReducer from './reducers/rootReducer';
 import { Provider } from 'react-redux';
 import { applyMiddleware, compose, legacy_createStore as createStore } from 'redux';
 import thunk from 'redux-thunk';
@@ -15,7 +15,7 @@ const composeEnhancers = composeAlt(
 )
 
 const store = createStore(
-    pokemonsReducer,
+    rootReducer,
     composeEnhancers    
   )
 
